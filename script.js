@@ -80,6 +80,11 @@ getRecipes = (url = createUrl()) => {
                 progressValue = 20
                 progress()
                 arrayLength = value.hits.length
+                if(arrayLength == 0){
+                    progressValue=-1
+                    progress()
+                    retutn ''
+                }
                 for (let i = 0; i < arrayLength; i++) {
                     createRecipe(value.hits[i], i)
                     setTimeout(() => {
