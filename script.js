@@ -83,7 +83,7 @@ getRecipes = (url = createUrl()) => {
                 if(arrayLength == 0){
                     progressValue=-1
                     progress()
-                    retutn ''
+                    return ''
                 }
                 for (let i = 0; i < arrayLength; i++) {
                     createRecipe(value.hits[i], i)
